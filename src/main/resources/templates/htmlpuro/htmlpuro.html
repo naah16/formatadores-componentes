@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Formatadores</title>
+<body>
+	<h1>Formatadores</h1>
+
+	<form action="#" th:action="@{/formatadores/inteiro}" method="post">
+		<label for="inteiro">Inteiro:</label>
+		<input type="number" id="inteiro" name="inteiro" value="123456" placeholder="Digite um número inteiro">
+		<input type="submit" value="Enviar">
+	</form>
+
+	<form action="#" th:action="@{/formatadores/bigdecimal}" method="post">
+		<label for="bigdecimal">BigDecimal:</label>
+		<input type="number" step="any" id="bigdecimal" name="bigDecimal" value="1234567898765.83" placeholder="Digite um número BigDecimal">
+		<input type="submit" value="Enviar">
+	</form>
+
+	<form action="#" th:action="@{/formatadores/localtime}" method="post">
+		<label for="localtime">Hora:</label>
+		<input type="time" id="localtime" name="hora" placeholder="Digite uma hora">
+		<input type="submit" value="Enviar">
+	</form>
+
+	<form action="#" th:action="@{/formatadores/localdate}" method="post">
+		<label for="localdate">Data:</label>
+		<input type="date" id="localdate" name="data" placeholder="Digite uma data">
+		<input type="submit" value="Enviar">
+	</form>
+
+	<hr>
+	<a th:href="@{/}">Voltar</a>
+</body>
+</html>
